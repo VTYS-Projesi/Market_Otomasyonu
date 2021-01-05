@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Product.cs" />
+    <Compile Include="DBModels.cs" />
     <Compile Include="AdminGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +113,8 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
+    <Compile Include="kullanıcılar.cs" />
+    <Compile Include="musteriler.cs" />
     <Compile Include="NakitSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +146,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs" />
+    <Compile Include="tedarikciler.cs" />
+    <Compile Include="urunler.cs" />
     <EmbeddedResource Include="AdminGiris.resx">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,9 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\supermarket-tuketici-1_22.10.2019_5b03e7c.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace Market
     {
         public double FirstNumber { get; private set; }
         public string Operation { get; private set; }
+        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-K9DFK8HV\MS;Initial Catalog=market_otomasyonu;Integrated Security=True");
 
         public SatisEkrani()
         {
@@ -152,6 +154,7 @@ namespace Market
             var m = new NakitSatis();
             m.Show();
             this.Hide();
+
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -237,6 +240,9 @@ namespace Market
             this.Hide();
         }
 
-        
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,6 +31,12 @@ namespace Market
             var m = new SatisEkrani();
             m.Show();
             this.Hide();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

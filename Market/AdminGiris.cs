@@ -28,32 +28,27 @@ namespace Market
 
         }
 
-        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-K9DFK8HV\MS;Initial Catalog=market_otomasyonu;Integrated Security=True");
-
         private void button1_Click(object sender, EventArgs e)
         {
             string kullaniciAdi = textBox1.Text;
             string sifre = textBox2.Text;
 
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand();
-            komut.Connection = baglanti;
-            komut.CommandText = "SELECT * FROM kullanıcılar WHERE KullaniciAdi = '" + kullaniciAdi + "' AND Sifre = '" + sifre + "'";
-            komut.ExecuteNonQuery();
-            SqlDataReader dr = komut.ExecuteReader();
-            if (dr.Read())
+            using (var db = new DBModels())
             {
-                var m = new Form1();
-                m.Show();
-                this.Hide();
-                
-            }
-            else
-            {
-                MessageBox.Show("Hatalı giriş yaptınız. Tekrar Deneyiniz.");
-            }
-            baglanti.Close();
+                var kullanici = db.kullanıcılar.Where(a => a.KullaniciAdi == kullaniciAdi && a.Sifre == sifre).FirstOrDefault();
+                if (kullanici != null)
+                {
+                    var m = new Form1();
+                    m.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı giriş yaptınız. Tekrar Deneyiniz.");
+                }
+            }   
         }
+
         private void panelLeft_Paint(object sender, PaintEventArgs e)
         {
             timer1.Interval = 10;
