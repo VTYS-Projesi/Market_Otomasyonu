@@ -13,9 +13,10 @@ namespace Market
 {
     public partial class SatisEkrani : Form
     {
+        DataTable tablo = new DataTable();
+        double tutar = 0;
         public double FirstNumber { get; private set; }
         public string Operation { get; private set; }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-K9DFK8HV\MS;Initial Catalog=market_otomasyonu;Integrated Security=True");
 
         public SatisEkrani()
         {
@@ -151,7 +152,7 @@ namespace Market
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            var m = new NakitSatis();
+            var m = new NakitSatis(this);
             m.Show();
             this.Hide();
 
@@ -242,7 +243,30 @@ namespace Market
 
         private void button19_Click(object sender, EventArgs e)
         {
+           
+            var barkodNo = textBox2.Text; 
+            using (var db = new DBModels())
+            {
+                var urun = db.urunler.FirstOrDefault(a => a.BarkodNo.ToString() == barkodNo);
+                if (urun != null )
+                { 
+                    tablo.Rows.Add(urun.UrunAdi, urun.UrunAdet, urun.SatisFiyat);
+                    dataGridView1.DataSource = tablo;
+                }
+                else
+                {
+                    MessageBox.Show("Girdiğiniz barkod numarasına ait bir ürün bulunamadı.");
+                }
+                tutar += urun.SatisFiyat;
+                textBox1.Text = tutar.ToString();
+            }
+        }
 
+        private void SatisEkrani_Load(object sender, EventArgs e)
+        { 
+            tablo.Columns.Add("Ürün Adı", typeof(string));
+            tablo.Columns.Add("Miktar", typeof(int));
+            tablo.Columns.Add("Fiyat", typeof(double));
         }
     }
 }
