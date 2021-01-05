@@ -139,6 +139,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "NakitSatis";
             this.Text = "Nakit Satış Ekranı";
+            this.Load += new System.EventHandler(this.NakitSatis_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

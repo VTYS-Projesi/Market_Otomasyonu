@@ -59,15 +59,5 @@ namespace Market.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap supermarket_tuketici_1_22_10_2019_5b03e7c {
-            get {
-                object obj = ResourceManager.GetObject("supermarket-tuketici-1_22.10.2019_5b03e7c", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

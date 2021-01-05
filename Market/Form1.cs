@@ -31,15 +31,9 @@ namespace Market
             this.Hide();
         }
 
-        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            timer1.Interval = 10;
-            timer1.Enabled = true;
-        }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label3.Text = DateTime.Now.ToString();
         }
     }
 }

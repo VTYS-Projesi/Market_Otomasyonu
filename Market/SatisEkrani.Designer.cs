@@ -390,6 +390,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "SatisEkrani";
             this.Text = "Satış Ekranı";
+            this.Load += new System.EventHandler(this.SatisEkrani_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -12,8 +12,10 @@ namespace Market
 {
     public partial class NakitSatis : Form
     {
-        public NakitSatis()
+        private SatisEkrani frm1;
+        public NakitSatis(SatisEkrani frm1)
         {
+            this.frm1 = frm1;
             InitializeComponent();
         }
 
@@ -37,6 +39,11 @@ namespace Market
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void NakitSatis_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = frm1.textBox1.Text;
         }
     }
 }
