@@ -25,7 +25,31 @@ namespace Market
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string kullaniciAdi = textBox3.Text;
+            string sifre = textBox4.Text;
+            string email = textBox5.Text;
 
+            using (var db = new DBModels())
+            {
+                if (kullaniciAdi != "" && sifre != "" && email != "")
+                {
+                    var kullanici = new kullanıcılar();
+                    kullanici.KullaniciAdi = kullaniciAdi;
+                    kullanici.Sifre = sifre;
+                    kullanici.Email = email;
+                    db.kullanıcılar.Add(kullanici);
+                    db.SaveChanges();
+                    MessageBox.Show($"{kullaniciAdi} Başarıyla Kayıt Oldunuz.");
+                    textBox3.Text = null;
+                    textBox4.Text = null;
+                    textBox5.Text = null;
+                }
+                else
+                {
+                    MessageBox.Show("Eksik giriş yaptınız. Lütfen tekrar deneyiniz.");
+                }
+               
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +59,7 @@ namespace Market
 
             using (var db = new DBModels())
             {
-                var kullanici = db.kullanıcılar.Where(a => a.KullaniciAdi == kullaniciAdi && a.Sifre == sifre).FirstOrDefault();
+                var kullanici = db.kullanıcılar.FirstOrDefault(a => a.KullaniciAdi == kullaniciAdi && a.Sifre == sifre);
                 if (kullanici != null)
                 {
                     var m = new Form1();
