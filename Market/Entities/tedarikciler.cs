@@ -1,4 +1,4 @@
-namespace Market
+namespace Market.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -6,8 +6,8 @@ namespace Market
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("tedarikciler")]
-    public partial class tedarikciler
+    [Table("Tedarikciler")]
+    public partial class Tedarikciler
     {
         [Key]
         public int TedarikciId { get; set; }

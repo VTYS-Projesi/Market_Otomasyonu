@@ -1,9 +1,7 @@
 ﻿namespace Market
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
+    using Market.Entities;
 
     public partial class DBModels : DbContext
     {
@@ -12,35 +10,38 @@
         {
         }
 
-        public virtual DbSet<kullanıcılar> kullanıcılar { get; set; }
-        public virtual DbSet<musteriler> musteriler { get; set; }
+        public virtual DbSet<Kullanicilar> Kullanıcılar { get; set; }
+        public virtual DbSet<Musteriler> Musteriler { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<tedarikciler> tedarikciler { get; set; }
-        public virtual DbSet<urunler> urunler { get; set; }
+        public virtual DbSet<Tedarikciler> Tedarikciler { get; set; }
+        public virtual DbSet<Urunler> Urunler { get; set; }
+        public virtual DbSet<Irsaliye> Irsaliyeler { get; set; }
+        public virtual DbSet<Borc> Borclar { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<kullanıcılar>()
+            modelBuilder.Entity<Kullanicilar>()
                 .Property(e => e.KullaniciAdi)
                 .IsFixedLength();
 
-            modelBuilder.Entity<kullanıcılar>()
+            modelBuilder.Entity<Kullanicilar>()
                 .Property(e => e.Email)
                 .IsFixedLength();
 
-            modelBuilder.Entity<musteriler>()
+            modelBuilder.Entity<Musteriler>()
                 .Property(e => e.MusteriAd)
                 .IsFixedLength();
 
-            modelBuilder.Entity<musteriler>()
+            modelBuilder.Entity<Musteriler>()
                 .Property(e => e.MusteriSoyad)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tedarikciler>()
+            modelBuilder.Entity<Tedarikciler>()
                 .Property(e => e.TedarikciAdi)
                 .IsFixedLength();
 
-            modelBuilder.Entity<urunler>()
+            modelBuilder.Entity<Urunler>()
                 .Property(e => e.UrunAdi)
                 .IsFixedLength();
         }

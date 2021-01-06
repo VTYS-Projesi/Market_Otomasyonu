@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Market.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,11 +34,11 @@ namespace Market
             {
                 if (kullaniciAdi != "" && sifre != "" && email != "")
                 {
-                    var kullanici = new kullanıcılar();
+                    var kullanici = new Kullanicilar();
                     kullanici.KullaniciAdi = kullaniciAdi;
                     kullanici.Sifre = sifre;
                     kullanici.Email = email;
-                    db.kullanıcılar.Add(kullanici);
+                    db.Kullanıcılar.Add(kullanici);
                     db.SaveChanges();
                     MessageBox.Show($"{kullaniciAdi} Başarıyla Kayıt Oldunuz.");
                     textBox3.Text = null;
@@ -59,7 +60,7 @@ namespace Market
 
             using (var db = new DBModels())
             {
-                var kullanici = db.kullanıcılar.FirstOrDefault(a => a.KullaniciAdi == kullaniciAdi && a.Sifre == sifre);
+                var kullanici = db.Kullanıcılar.FirstOrDefault(a => a.KullaniciAdi == kullaniciAdi && a.Sifre == sifre);
                 if (kullanici != null)
                 {
                     var m = new Form1();

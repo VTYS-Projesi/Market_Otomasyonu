@@ -247,7 +247,7 @@ namespace Market
             var barkodNo = textBox2.Text; 
             using (var db = new DBModels())
             {
-                var urun = db.urunler.FirstOrDefault(a => a.BarkodNo.ToString() == barkodNo);
+                var urun = db.Urunler.FirstOrDefault(a => a.BarkodNo.ToString() == barkodNo);
                 if (urun != null )
                 { 
                     tablo.Rows.Add(urun.UrunAdi, urun.UrunAdet, urun.SatisFiyat);
