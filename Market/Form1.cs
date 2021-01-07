@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //asd
+//yorum satırı eklendi
 namespace Market
 {
     public partial class Form1 : Form
