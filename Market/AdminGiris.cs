@@ -59,5 +59,10 @@ namespace Market
         {
             label8.Text = DateTime.Now.ToString();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
