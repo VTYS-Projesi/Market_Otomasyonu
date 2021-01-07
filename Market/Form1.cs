@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//asd
-//yorum satırı eklendi
-//3.yorum satırı
+// commit
 namespace Market
 {
     public partial class Form1 : Form
