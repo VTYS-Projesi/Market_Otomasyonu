@@ -1,6 +1,7 @@
 ﻿namespace Market
 {
     using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
     using Market.Entities;
 
     public partial class DBModels : DbContext
@@ -21,6 +22,7 @@
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Kullanicilar>()
                 .Property(e => e.KullaniciAdi)
                 .IsFixedLength();
