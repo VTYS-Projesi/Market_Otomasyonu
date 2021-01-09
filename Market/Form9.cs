@@ -1,7 +1,7 @@
 ﻿using Market.Entities;
 using System;
 using System.Windows.Forms;
-
+//deneme yorum satırı eklendi
 namespace Market
 {
     public partial class Form9 : Form
