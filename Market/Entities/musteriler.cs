@@ -18,7 +18,8 @@ namespace Market.Entities
         [StringLength(50)]
         public string MusteriSoyad { get; set; }
 
-        public int? MusteriTelNo { get; set; }
+        [StringLength(50)]
+        public string MusteriTelNo { get; set; }
 
         public int? Borc { get; set; }
 
