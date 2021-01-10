@@ -1,10 +1,7 @@
 namespace Market.Entities
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Musteriler")]
     public partial class Musteriler
@@ -21,9 +18,5 @@ namespace Market.Entities
         [StringLength(50)]
         public string MusteriTelNo { get; set; }
 
-        public int? Borc { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? Tarih { get; set; }
     }
 }

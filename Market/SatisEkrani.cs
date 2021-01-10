@@ -145,8 +145,7 @@ namespace Market
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            var frm1 = new SatisEkrani();
-            var m = new Form3(frm1);
+            var m = new Form3(this);
             m.Show();
             this.Hide();
         }

@@ -18,6 +18,7 @@
         public virtual DbSet<Urunler> Urunler { get; set; }
         public virtual DbSet<Irsaliye> Irsaliyeler { get; set; }
         public virtual DbSet<Borc> Borclar { get; set; }
+        public virtual DbSet<MusteriBorc> MusteriBorclar { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

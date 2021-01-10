@@ -32,16 +32,25 @@ namespace Market
             string telNo = textBox1.Text;
             using (var db = new DBModels())
             {
-                var musteri = db.Musteriler.FirstOrDefault(m => m.MusteriTelNo == telNo);
-                if (musteri != null)
+                var musteriBorclar = db.MusteriBorclar.Where(m => m.Musteri.MusteriTelNo == telNo).ToList();
+                if (musteriBorclar != null)
                 {
-                    tablo.Rows.Add(musteri.MusteriAd, musteri.MusteriSoyad, musteri.Borc, musteri.Tarih);
-                    dataGridView1.DataSource = tablo;
+                    foreach (var musteriBorc in musteriBorclar)
+                    {
+                        tablo.Rows.Add(musteriBorc.Musteri.MusteriAd, musteriBorc.Musteri.MusteriSoyad, musteriBorc.Borc, musteriBorc.Tarih);
+                        dataGridView1.DataSource = tablo;
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Girdiğiniz telefon numarasına ait bir müşteri bulunamadı.");
+                }
+
+
             }
         }
 
-     
+
 
         private void Form4_Load(object sender, EventArgs e)
         {

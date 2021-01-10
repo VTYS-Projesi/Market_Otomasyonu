@@ -65,6 +65,7 @@
     <Compile Include="AdminGiris.Designer.cs">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\MusteriBorc.cs" />
     <Compile Include="Entities\Irsaliye.cs" />
     <Compile Include="Entities\Borc.cs" />
     <Compile Include="Form1.cs">
