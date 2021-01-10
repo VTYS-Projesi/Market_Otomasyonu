@@ -23,5 +23,17 @@ namespace Market
             m.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var m = new UrunEkleme();
+            m.Show();
+            this.Hide();
+        }
     }
 }

@@ -65,6 +65,7 @@
     <Compile Include="AdminGiris.Designer.cs">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\UrunStok.cs" />
     <Compile Include="Entities\MusteriBorc.cs" />
     <Compile Include="Entities\Irsaliye.cs" />
     <Compile Include="Entities\Borc.cs" />
@@ -158,6 +159,12 @@
     <Compile Include="Entities\sysdiagrams.cs" />
     <Compile Include="Entities\Tedarikciler.cs" />
     <Compile Include="Entities\Urunler.cs" />
+    <Compile Include="UrunEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunEkleme.Designer.cs">
+      <DependentUpon>UrunEkleme.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminGiris.resx">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +217,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UrunEkleme.resx">
+      <DependentUpon>UrunEkleme.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="market_otomasyonuDataSet.xsc">
       <DependentUpon>market_otomasyonuDataSet.xsd</DependentUpon>
     </None>
