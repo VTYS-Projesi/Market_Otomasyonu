@@ -250,7 +250,7 @@ namespace Market
                 var urun = db.Urunler.FirstOrDefault(a => a.BarkodNo.ToString() == barkodNo);
                 if (urun != null )
                 { 
-                    tablo.Rows.Add(urun.UrunAdi, urun.UrunAdet, urun.SatisFiyat);
+                    tablo.Rows.Add(urun.UrunAdi, urun.Miktar, urun.SatisFiyat);
                     dataGridView1.DataSource = tablo;
                 }
                 else
@@ -267,6 +267,11 @@ namespace Market
             tablo.Columns.Add("Ürün Adı", typeof(string));
             tablo.Columns.Add("Miktar", typeof(int));
             tablo.Columns.Add("Fiyat", typeof(double));
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
