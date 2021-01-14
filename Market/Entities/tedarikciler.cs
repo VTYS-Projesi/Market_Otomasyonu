@@ -12,7 +12,12 @@ namespace Market.Entities
         [Key]
         public int TedarikciId { get; set; }
 
+        public int? BorcId { get; set; }
+
         [StringLength(50)]
         public string TedarikciAdi { get; set; }
+
+        [ForeignKey("BorcId")]
+        public virtual Borc Borc { get; set; }
     }
 }

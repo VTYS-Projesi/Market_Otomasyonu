@@ -7,7 +7,7 @@ namespace Market.Entities
     public partial class Borc
     {
         [Key]
-        public int TedarikciId { get; set; }
+        public int BorcId { get; set; }
 
         public int KullaniciId { get; set; }
 
@@ -15,5 +15,9 @@ namespace Market.Entities
 
         [Column(TypeName = "date")]
         public DateTime Tarih { get; set; }
+
+        [ForeignKey("KullaniciId")]
+        public virtual Kullanicilar Kullanici { get; set; }
+
     }
 }
