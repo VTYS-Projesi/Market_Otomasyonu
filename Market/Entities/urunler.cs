@@ -21,9 +21,9 @@ namespace Market.Entities
 
         public int Miktar { get; set; }
 
-        public int İrsaliyeNo { get; set; }
+        public int IrsaliyeNo { get; set; }
 
-        [ForeignKey("İrsaliyeNo")]
+        [ForeignKey("IrsaliyeNo")]
         public virtual Irsaliye Irsaliye { get; set; }
 
     }
