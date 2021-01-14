@@ -47,7 +47,7 @@ namespace Market
                 }
                 else
                 {
-                    MessageBox.Show("Eksik giriş yaptınız. Lütfen tekrar deneyiniz.");
+                    MessageBox.Show("Eksik Giriş Yaptınız. Lütfen Tekrar Deneyiniz.");
                 }
 
             }
