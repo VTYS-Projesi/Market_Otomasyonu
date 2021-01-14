@@ -38,7 +38,7 @@ namespace Market
                 {
                     var urun = new Urunler();
                     var values = ln.Split(',');
-                    urun.İrsaliyeNo = Int32.Parse(values[0]);
+                    urun.IrsaliyeNo = Int32.Parse(values[0]);
                     urun.UrunKodu = Int32.Parse(values[1]);
                     urun.BarkodNo = Int32.Parse(values[2]);
                     urun.AlisFiyat = Int32.Parse(values[3]);

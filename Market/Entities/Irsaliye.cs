@@ -9,6 +9,5 @@ namespace Market.Entities
 
         public string BirimFiyati { get; set; }
 
-        public int Miktari { get; set; }
     }
 }
