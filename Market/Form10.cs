@@ -42,7 +42,7 @@ namespace Market
                     tedarikci.TedarikciAdi = adi;
                     db.Tedarikciler.Add(tedarikci);
                     db.SaveChanges();
-                    MessageBox.Show($"{adi} Başarıyla Eklendiniz.");
+                    MessageBox.Show($"{adi} Başarıyla  Eklendiniz.");
                     textBox1.Text = null;
                 }
                 else

@@ -30,8 +30,8 @@ namespace Market
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Geri = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Geri = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -49,16 +49,6 @@ namespace Market
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Geri
-            // 
-            this.Geri.Location = new System.Drawing.Point(27, 13);
-            this.Geri.Name = "Geri";
-            this.Geri.Size = new System.Drawing.Size(75, 23);
-            this.Geri.TabIndex = 0;
-            this.Geri.Text = "Geri";
-            this.Geri.UseVisualStyleBackColor = true;
-            this.Geri.Click += new System.EventHandler(this.Geri_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(27, 397);
@@ -69,10 +59,20 @@ namespace Market
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Geri
+            // 
+            this.Geri.Location = new System.Drawing.Point(27, 13);
+            this.Geri.Name = "Geri";
+            this.Geri.Size = new System.Drawing.Size(75, 23);
+            this.Geri.TabIndex = 0;
+            this.Geri.Text = "Geri";
+            this.Geri.UseVisualStyleBackColor = true;
+            this.Geri.Click += new System.EventHandler(this.Geri_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(426, 23);
+            this.label1.Location = new System.Drawing.Point(277, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 1;
@@ -80,7 +80,7 @@ namespace Market
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(429, 96);
+            this.textBox1.Location = new System.Drawing.Point(441, 125);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
