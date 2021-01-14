@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -40,7 +39,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -49,15 +47,6 @@
             this.panel1.Size = new System.Drawing.Size(382, 499);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
             // 
             // label1
             // 
@@ -81,7 +70,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(499, 191);
+            this.button2.Location = new System.Drawing.Point(499, 213);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 60);
             this.button2.TabIndex = 2;
@@ -93,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(508, 130);
+            this.label2.Location = new System.Drawing.Point(495, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 22);
             this.label2.TabIndex = 3;
@@ -124,6 +113,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
